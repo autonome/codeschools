@@ -1,0 +1,2163 @@
+var schools = [
+  {
+    "title": "Wyncode",
+    "coursereport": "https://www.coursereport.com/schools/wyncode",
+    "locations": "Fort Lauderdale, Miami, Miami Beach",
+    "rating": "Avg Rating: 4.8 (86 reviews)",
+    "type": "Mobile Development",
+    "email": "weare@wyncode.co",
+    "website": "Wyncode Website"
+  },
+  {
+    "title": "DevMountain",
+    "coursereport": "https://www.coursereport.com/schools/devmountain",
+    "locations": "Dallas, Provo, Salt Lake City",
+    "rating": "Avg Rating: 4.6 (83 reviews)",
+    "type": "Mobile Development",
+    "email": "admin@devmounta.in",
+    "website": "DevMountain Website"
+  },
+  {
+    "title": "The Iron Yard",
+    "coursereport": "https://www.coursereport.com/schools/the-iron-yard",
+    "locations": "Atlanta, Cincinnati, Cleveland, San Antonio, Denver, Durham, Minneapolis, Detroit, Las Vegas, Greenville, Charleston, Columbia, SC, Dallas, Salt Lake City, Raleigh, Washington, Houston, Phoenix, Charlotte, Austin, Nashville, London, Little Rock, Indianapolis",
+    "rating": "Avg Rating: 3.5 (37 reviews)",
+    "type": "Mobile Development",
+    "website": "The Iron Yard Website",
+    "email": "academy@theironyard.com"
+  },
+  {
+    "title": "Epicodus",
+    "coursereport": "https://www.coursereport.com/schools/epicodus",
+    "locations": "Portland, Seattle",
+    "rating": "Avg Rating: 4.9 (73 reviews)",
+    "website": "Epicodus Website",
+    "email": "hi@epicodus.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Thinkful",
+    "coursereport": "https://www.coursereport.com/schools/thinkful",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.3 (70 reviews)",
+    "email": "hello@thinkful.com",
+    "website": "Thinkful Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Turing",
+    "coursereport": "https://www.coursereport.com/schools/turing",
+    "locations": "Denver",
+    "rating": "Avg Rating: 4.8 (59 reviews)",
+    "website": "Turing Website",
+    "email": "contact@turing.io",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Le Wagon",
+    "coursereport": "https://www.coursereport.com/schools/le-wagon",
+    "locations": "Paris, Bordeaux, Amsterdam, Beirut, Brussels, Lille",
+    "rating": "Avg Rating: 5.0 (58 reviews)",
+    "website": "Le Wagon Website",
+    "type": "Full-Stack Web Development",
+    "email": "contact@lewagon.org"
+  },
+  {
+    "title": "Tech Academy Portland",
+    "coursereport": "https://www.coursereport.com/schools/tech-academy-portland",
+    "locations": "Online, Portland",
+    "rating": "Avg Rating: 4.9 (58 reviews)",
+    "email": "info@learncodinganywhere.com",
+    "type": "Mobile Development",
+    "website": "Tech Academy Portland Website"
+  },
+  {
+    "title": "Coding Dojo",
+    "coursereport": "https://www.coursereport.com/schools/coding-dojo",
+    "locations": "Seattle, San Francisco, Online, Silicon Valley, Hybrid (Online & In-person), Dallas, Los Angeles",
+    "rating": "Avg Rating: 4.3 (57 reviews)",
+    "website": "Coding Dojo Website",
+    "email": "info@codingdojo.co",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Code Fellows",
+    "coursereport": "https://www.coursereport.com/schools/code-fellows",
+    "locations": "Seattle, Portland",
+    "rating": "Avg Rating: 4.0 (54 reviews)",
+    "type": "Mobile Development",
+    "website": "Code Fellows Website"
+  },
+  {
+    "title": "MakerSquare",
+    "coursereport": "https://www.coursereport.com/schools/makersquare",
+    "locations": "Austin, Los Angeles, San Francisco, New York",
+    "rating": "Avg Rating: 4.4 (54 reviews)",
+    "email": "hello@makersquare.com",
+    "website": "MakerSquare Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "IronHack",
+    "coursereport": "https://www.coursereport.com/schools/ironhack",
+    "locations": "Madrid, Barcelona, Miami",
+    "rating": "Avg Rating: 4.9 (51 reviews)",
+    "website": "IronHack Website",
+    "email": "hi@ironhack.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Product School",
+    "coursereport": "https://www.coursereport.com/schools/product-school",
+    "locations": "New York, San Francisco, Silicon Valley",
+    "rating": "Avg Rating: 4.9 (50 reviews)",
+    "website": "Product School Website",
+    "email": "admissions@productschool.com",
+    "type": "Product Management"
+  },
+  {
+    "title": "Bloc",
+    "coursereport": "https://www.coursereport.com/schools/bloc",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.1 (46 reviews)",
+    "type": "Mobile Development",
+    "website": "Bloc Website",
+    "email": "hello@bloc.io"
+  },
+  {
+    "title": "tradecraft",
+    "coursereport": "https://www.coursereport.com/schools/tradecraft",
+    "locations": "San Francisco",
+    "rating": "Avg Rating: 5.0 (46 reviews)",
+    "website": "tradecraft Website",
+    "type": "Other"
+  },
+  {
+    "title": "Dev Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/dev-bootcamp",
+    "locations": "Seattle, San Diego, San Francisco, New York, Chicago, Austin",
+    "rating": "Avg Rating: 4.5 (43 reviews)",
+    "email": "hello@devbootcamp.com",
+    "type": "Full-Stack Web Development",
+    "website": "Dev Bootcamp Website"
+  },
+  {
+    "title": "CareerFoundry",
+    "coursereport": "https://www.coursereport.com/schools/careerfoundry",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.4 (35 reviews)",
+    "website": "CareerFoundry Website",
+    "email": "askannie@careerfoundry.com",
+    "type": "UX Design"
+  },
+  {
+    "title": "Coder Foundry",
+    "coursereport": "https://www.coursereport.com/schools/coder-foundry",
+    "locations": "Greensboro, NC, Charlotte",
+    "rating": "Avg Rating: 4.6 (34 reviews)",
+    "email": "info@coderfoundry.com",
+    "website": "Coder Foundry Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Tech Talent South",
+    "coursereport": "https://www.coursereport.com/schools/tech-talent-south",
+    "locations": "Jacksonville, Atlanta, Raleigh, Asheville, Charlotte, Dallas, Alpharetta, New Orleans",
+    "rating": "Avg Rating: 4.8 (33 reviews)",
+    "website": "Tech Talent South Website",
+    "email": "info@techtalentsouth.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "AcadGild",
+    "coursereport": "https://www.coursereport.com/schools/acadgild",
+    "locations": "Online, Bangalore",
+    "rating": "Avg Rating: 4.0 (29 reviews)",
+    "type": "Mobile Development",
+    "email": "enquiry@acadgild.com",
+    "website": "AcadGild Website"
+  },
+  {
+    "title": "General Assembly",
+    "coursereport": "https://www.coursereport.com/schools/general-assembly",
+    "locations": "Melbourne, Denver, Austin, Sydney, San Francisco, Boston, Seattle, Singapore, New York, Washington, Chicago, Atlanta, Hong Kong, Los Angeles, Online, London",
+    "rating": "Avg Rating: 3.5 (29 reviews)",
+    "website": "General Assembly Website",
+    "email": "hello@generalassemb.ly",
+    "type": "Product Management"
+  },
+  {
+    "title": "Lighthouse Labs",
+    "coursereport": "https://www.coursereport.com/schools/lighthouse-labs",
+    "locations": "Montreal, Okanagan, Toronto, Vancouver, Victoria, BC, Calgary",
+    "rating": "Avg Rating: 4.7 (29 reviews)",
+    "email": "hello@lighthouselabs.ca",
+    "type": "Mobile Development",
+    "website": "Lighthouse Labs Website"
+  },
+  {
+    "title": "Sabio.la",
+    "coursereport": "https://www.coursereport.com/schools/sabio-la",
+    "locations": "Los Angeles, Orange County",
+    "rating": "Avg Rating: 4.9 (29 reviews)",
+    "email": "join@sabio.la",
+    "type": "Other",
+    "website": "Sabio.la Website"
+  },
+  {
+    "title": "Software Guild",
+    "coursereport": "https://www.coursereport.com/schools/software-guild",
+    "locations": "Online, Minneapolis, Louisville, Akron",
+    "rating": "Avg Rating: 4.9 (29 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "Software Guild Website",
+    "email": "info@thesoftwareguild.com"
+  },
+  {
+    "title": "Designlab",
+    "coursereport": "https://www.coursereport.com/schools/designlab",
+    "locations": "Online",
+    "rating": "Avg Rating: 5.0 (28 reviews)",
+    "email": "hello@trydesignlab.com",
+    "type": "UX Design",
+    "website": "Designlab Website"
+  },
+  {
+    "title": "Fullstack Academy",
+    "coursereport": "https://www.coursereport.com/schools/fullstack-academy",
+    "locations": "Chicago, New York",
+    "rating": "Avg Rating: 5.0 (28 reviews)",
+    "type": "Front-End Web Development",
+    "website": "Fullstack Academy Website",
+    "email": "hello@fullstackacademy.com"
+  },
+  {
+    "title": "Bitmaker Labs",
+    "coursereport": "https://www.coursereport.com/schools/bitmaker-labs",
+    "locations": "Toronto",
+    "rating": "Avg Rating: 4.4 (27 reviews)",
+    "website": "Bitmaker Labs Website",
+    "type": "Mobile Development",
+    "email": "contact@bitmaker.co"
+  },
+  {
+    "title": "Hack Reactor",
+    "coursereport": "https://www.coursereport.com/schools/hack-reactor",
+    "locations": "San Francisco, Online",
+    "rating": "Avg Rating: 5.0 (27 reviews)",
+    "email": "contact@hackreactor.com",
+    "type": "Full-Stack Web Development",
+    "website": "Hack Reactor Website"
+  },
+  {
+    "title": "BrainStation",
+    "coursereport": "https://www.coursereport.com/schools/brainstation",
+    "locations": "San Jose, Ottawa, Vancouver, Toronto, New York",
+    "rating": "Avg Rating: 4.4 (26 reviews)",
+    "website": "BrainStation Website",
+    "type": "Product Management",
+    "email": "contact@brainstation.io"
+  },
+  {
+    "title": "Codify Academy",
+    "coursereport": "https://www.coursereport.com/schools/codify-academy",
+    "locations": "Hybrid (Online & In-person), San Francisco, New York",
+    "rating": "Avg Rating: 4.7 (26 reviews)",
+    "website": "Codify Academy Website",
+    "type": "Front-End Web Development",
+    "email": "sambrody@codifyacademy.com"
+  },
+  {
+    "title": "NYC Data Science Academy",
+    "coursereport": "https://www.coursereport.com/schools/nyc-data-science-academy",
+    "locations": "New York, Online",
+    "rating": "Avg Rating: 5.0 (22 reviews)",
+    "website": "NYC Data Science Academy Website",
+    "type": "Data Science",
+    "email": "info@nycdatascience.com"
+  },
+  {
+    "title": "Coder Camps",
+    "coursereport": "https://www.coursereport.com/schools/coder-camps",
+    "locations": "Houston, Online, Seattle, San Francisco, Washington",
+    "rating": "Avg Rating: 4.0 (21 reviews)",
+    "website": "Coder Camps Website",
+    "type": "Mobile Development",
+    "email": "howdy@codercamps.com"
+  },
+  {
+    "title": "Telegraph Academy",
+    "coursereport": "https://www.coursereport.com/schools/telegraph-academy",
+    "locations": "Oakland",
+    "rating": "Avg Rating: 3.6 (21 reviews)",
+    "website": "Telegraph Academy Website",
+    "email": "hello@telegraphacademy.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Flatiron School",
+    "coursereport": "https://www.coursereport.com/schools/flatiron-school",
+    "locations": "Online, New York",
+    "rating": "Avg Rating: 4.6 (19 reviews)",
+    "website": "Flatiron School Website",
+    "email": "info@flatironschool.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Launch Academy",
+    "coursereport": "https://www.coursereport.com/schools/launch-academy",
+    "locations": "Boston, Online",
+    "rating": "Avg Rating: 4.9 (19 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "hello@launchacademy.co",
+    "website": "Launch Academy Website"
+  },
+  {
+    "title": "CodeCore Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/codecore-bootcamp",
+    "locations": "Vancouver",
+    "rating": "Avg Rating: 4.9 (18 reviews)",
+    "type": "Mobile Development",
+    "email": "info@codecore.ca",
+    "website": "CodeCore Bootcamp Website"
+  },
+  {
+    "title": "Coding House",
+    "coursereport": "https://www.coursereport.com/schools/coding-house",
+    "locations": "Silicon Valley",
+    "rating": "Avg Rating: 4.5 (18 reviews)",
+    "email": "info@codinghouse.co",
+    "type": "Full-Stack Web Development",
+    "website": "Coding House Website"
+  },
+  {
+    "title": "Byte Academy",
+    "coursereport": "https://www.coursereport.com/schools/byte-academy",
+    "locations": "New York",
+    "rating": "Avg Rating: 4.3 (17 reviews)",
+    "website": "Byte Academy Website",
+    "email": "info@byteacademy.co",
+    "type": "Other"
+  },
+  {
+    "title": "Eleven Fifty Academy",
+    "coursereport": "https://www.coursereport.com/schools/eleven-fifty-academy",
+    "locations": "Indianapolis",
+    "rating": "Avg Rating: 4.8 (17 reviews)",
+    "email": "info@elevenfiftyacademy.org",
+    "type": "Mobile Development",
+    "website": "Eleven Fifty Academy Website"
+  },
+  {
+    "title": "Mobile Makers Academy",
+    "coursereport": "https://www.coursereport.com/schools/mobile-makers-academy",
+    "locations": "San Francisco, Chicago",
+    "rating": "Avg Rating: 4.8 (17 reviews)",
+    "type": "Mobile Development",
+    "website": "Mobile Makers Academy Website",
+    "email": "hello@mobilemakers.co"
+  },
+  {
+    "title": "RefactorU",
+    "coursereport": "https://www.coursereport.com/schools/refactoru",
+    "locations": "Boulder, Online",
+    "rating": "Avg Rating: 4.6 (17 reviews)",
+    "website": "RefactorU Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@refactoru.com"
+  },
+  {
+    "title": "DaVinci Coders",
+    "coursereport": "https://www.coursereport.com/schools/davinci-coders",
+    "locations": "Boulder",
+    "rating": "Avg Rating: 4.1 (16 reviews)",
+    "website": "DaVinci Coders Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "DESIGNATION",
+    "coursereport": "https://www.coursereport.com/schools/designation",
+    "locations": "Chicago",
+    "rating": "Avg Rating: 4.9 (16 reviews)",
+    "email": "team@designation.io",
+    "type": "Front-End Web Development",
+    "website": "DESIGNATION Website"
+  },
+  {
+    "title": "Prime Digital Academy",
+    "coursereport": "https://www.coursereport.com/schools/prime-digital-academy",
+    "locations": "Minneapolis",
+    "rating": "Avg Rating: 4.8 (16 reviews)",
+    "email": "hello@primeacademy.io",
+    "type": "Full-Stack Web Development",
+    "website": "Prime Digital Academy Website"
+  },
+  {
+    "title": "Skill Distillery",
+    "coursereport": "https://www.coursereport.com/schools/skill-distillery",
+    "locations": "Denver",
+    "rating": "Avg Rating: 3.1 (16 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "info@skilldistillery.com",
+    "website": "Skill Distillery Website"
+  },
+  {
+    "title": "Startup Institute",
+    "coursereport": "https://www.coursereport.com/schools/startup-institute",
+    "locations": "New York, Boston, Chicago",
+    "rating": "Avg Rating: 4.8 (16 reviews)",
+    "type": "Other",
+    "website": "Startup Institute Website",
+    "email": "info@startupinstitute.com"
+  },
+  {
+    "title": "Anyone Can Learn To Code",
+    "coursereport": "https://www.coursereport.com/schools/anyone-can-learn-to-code",
+    "locations": "New York, San Francisco, Chicago",
+    "rating": "Avg Rating: 4.8 (15 reviews)",
+    "email": "hello@anyonecanlearntocode.com",
+    "website": "Anyone Can Learn To Code Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "LearningFuze",
+    "coursereport": "https://www.coursereport.com/schools/learningfuze",
+    "locations": "Orange County",
+    "rating": "Avg Rating: 5.0 (15 reviews)",
+    "email": "support@learningfuze.com",
+    "website": "LearningFuze Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Skillcrush",
+    "coursereport": "https://www.coursereport.com/schools/skillcrush",
+    "locations": "Online",
+    "rating": "Avg Rating: 3.2 (15 reviews)",
+    "email": "hello@skillcrush.com",
+    "type": "Front-End Web Development",
+    "website": "Skillcrush Website"
+  },
+  {
+    "title": "Codeup",
+    "coursereport": "https://www.coursereport.com/schools/codeup",
+    "locations": "San Antonio",
+    "rating": "Avg Rating: 4.9 (13 reviews)",
+    "website": "Codeup Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@codeup.com"
+  },
+  {
+    "title": "Galvanize",
+    "coursereport": "https://www.coursereport.com/schools/galvanize",
+    "locations": "Fort Collins, Boulder, Austin, San Francisco, London, Denver, Seattle",
+    "rating": "Avg Rating: 4.1 (13 reviews)",
+    "email": "info@galvanize.com",
+    "website": "Galvanize Website",
+    "type": "Data Science"
+  },
+  {
+    "title": "Orange County Code School",
+    "coursereport": "https://www.coursereport.com/schools/orange-county-code-school",
+    "locations": "Irvine, Orange County",
+    "rating": "Avg Rating: 5.0 (13 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "Orange County Code School Website"
+  },
+  {
+    "title": "Codesmith",
+    "coursereport": "https://www.coursereport.com/schools/codesmith",
+    "locations": "Los Angeles",
+    "rating": "Avg Rating: 5.0 (12 reviews)",
+    "type": "Mobile Development",
+    "email": "hello@codesmith.io",
+    "website": "Codesmith Website"
+  },
+  {
+    "title": "Makers Academy",
+    "coursereport": "https://www.coursereport.com/schools/makers-academy",
+    "locations": "Online, London",
+    "rating": "Avg Rating: 4.5 (12 reviews)",
+    "website": "Makers Academy Website",
+    "email": "contact@makersacademy.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "New York Code + Design Academy",
+    "coursereport": "https://www.coursereport.com/schools/new-york-code-design-academy",
+    "locations": "New York, Syracuse, Westchester, Amsterdam, Hamptons, Philadelphia",
+    "rating": "Avg Rating: 5.0 (12 reviews)",
+    "type": "Mobile Development",
+    "website": "New York Code + Design Academy Website",
+    "email": "info@nycda.com"
+  },
+  {
+    "title": "devCodeCamp",
+    "coursereport": "https://www.coursereport.com/schools/devcodecamp",
+    "locations": "Milwaukee",
+    "rating": "Avg Rating: 4.4 (11 reviews)",
+    "website": "devCodeCamp Website",
+    "email": "hello@devcodecamp.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "The Firehose Project",
+    "coursereport": "https://www.coursereport.com/schools/the-firehose-project",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.3 (11 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "The Firehose Project Website",
+    "email": "marco@thefirehoseproject.com"
+  },
+  {
+    "title": "App Academy",
+    "coursereport": "https://www.coursereport.com/schools/app-academy",
+    "locations": "New York, San Francisco",
+    "rating": "Avg Rating: 4.5 (10 reviews)",
+    "email": "contact@appacademy.io",
+    "website": "App Academy Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "DevPoint Labs",
+    "coursereport": "https://www.coursereport.com/schools/devpoint-labs",
+    "locations": "Salt Lake City, Provo",
+    "rating": "Avg Rating: 4.4 (9 reviews)",
+    "email": "Contact@DevPointLabs.com",
+    "website": "DevPoint Labs Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Koru",
+    "coursereport": "https://www.coursereport.com/schools/koru",
+    "locations": "Boston, Seattle, San Francisco",
+    "rating": "Avg Rating: 5.0 (9 reviews)",
+    "type": "Other",
+    "website": "Koru Website",
+    "email": "info@joinkoru.com"
+  },
+  {
+    "title": "Nashville Software School",
+    "coursereport": "https://www.coursereport.com/schools/nashville-software-school",
+    "locations": "Nashville",
+    "rating": "Avg Rating: 4.0 (9 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "Nashville Software School Website"
+  },
+  {
+    "title": "We Can Code IT",
+    "coursereport": "https://www.coursereport.com/schools/we-can-code-it",
+    "locations": "Cleveland",
+    "rating": "Avg Rating: 5.0 (9 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "We Can Code IT Website",
+    "email": "hello@WeCanCodeIT.org"
+  },
+  {
+    "title": "Dev League",
+    "coursereport": "https://www.coursereport.com/schools/dev-league",
+    "locations": "Honolulu",
+    "rating": "Avg Rating: 5.0 (8 reviews)",
+    "website": "Dev League Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Devschool",
+    "coursereport": "https://www.coursereport.com/schools/devschool",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.5 (8 reviews)",
+    "type": "Front-End Web Development",
+    "email": "hello@devschool.rocks",
+    "website": "Devschool Website"
+  },
+  {
+    "title": "DigitalCrafts",
+    "coursereport": "https://www.coursereport.com/schools/digitalcrafts",
+    "locations": "Atlanta",
+    "rating": "Avg Rating: 5.0 (8 reviews)",
+    "email": "hello@digitalcrafts.com",
+    "type": "Other",
+    "website": "DigitalCrafts Website"
+  },
+  {
+    "title": "Founders & Coders",
+    "coursereport": "https://www.coursereport.com/schools/founders-coders",
+    "locations": "London",
+    "rating": "Avg Rating: 5.0 (8 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "contact@foundersandcoders.org",
+    "website": "Founders & Coders Website"
+  },
+  {
+    "title": "Metis",
+    "coursereport": "https://www.coursereport.com/schools/metis",
+    "locations": "New York, San Francisco",
+    "rating": "Avg Rating: 4.9 (8 reviews)",
+    "type": "Data Science",
+    "email": "info@thisismetis.com",
+    "website": "Metis Website"
+  },
+  {
+    "title": "4Geeks Academy",
+    "coursereport": "https://www.coursereport.com/schools/4geeks-academy",
+    "locations": "Miami",
+    "rating": "Avg Rating: 4.9 (7 reviews)",
+    "website": "4Geeks Academy Website",
+    "email": "info@4geeksacademy.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Institute of Code",
+    "coursereport": "https://www.coursereport.com/schools/institute-of-code",
+    "locations": "Bali",
+    "rating": "Avg Rating: 4.9 (7 reviews)",
+    "type": "Front-End Web Development",
+    "email": "hello@instituteofcode.com",
+    "website": "Institute of Code Website"
+  },
+  {
+    "title": "LAMP Camp",
+    "coursereport": "https://www.coursereport.com/schools/lamp-camp",
+    "locations": "Atlanta",
+    "rating": "Avg Rating: 2.6 (7 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "LAMP Camp Website"
+  },
+  {
+    "title": "Bit Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/bit-bootcamp",
+    "locations": "Jersey City",
+    "rating": "Avg Rating: 4.8 (6 reviews)",
+    "website": "Bit Bootcamp Website",
+    "type": "Data Science",
+    "email": "enroll@bitbootcamp.com"
+  },
+  {
+    "title": "DecodeMTL",
+    "coursereport": "https://www.coursereport.com/schools/decodemtl",
+    "locations": "Montreal",
+    "rating": "Avg Rating: 5.0 (6 reviews)",
+    "email": "hello@decodemtl.com",
+    "type": "Front-End Web Development",
+    "website": "DecodeMTL Website"
+  },
+  {
+    "title": "HackDojo",
+    "coursereport": "https://www.coursereport.com/schools/hackdojo",
+    "locations": "Los Angeles",
+    "rating": "Avg Rating: 1.2 (6 reviews)",
+    "website": "HackDojo Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@schoolofdevs.com"
+  },
+  {
+    "title": "Market Campus",
+    "coursereport": "https://www.coursereport.com/schools/market-campus",
+    "locations": "Online",
+    "rating": "Avg Rating: 5.0 (6 reviews)",
+    "email": "info@marketcampus.com",
+    "website": "Market Campus Website",
+    "type": "Digital Marketing"
+  },
+  {
+    "title": "PDX Code Guild",
+    "coursereport": "https://www.coursereport.com/schools/pdx-code-guild",
+    "locations": "Portland",
+    "rating": "Avg Rating: 4.5 (6 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "Sheri@PDXCodeGuild.com",
+    "website": "PDX Code Guild Website"
+  },
+  {
+    "title": "Shillington School",
+    "coursereport": "https://www.coursereport.com/schools/shillington-school",
+    "locations": "New York",
+    "rating": "Avg Rating: 4.2 (6 reviews)",
+    "type": "UX Design",
+    "website": "Shillington School Website"
+  },
+  {
+    "title": "Starter League",
+    "coursereport": "https://www.coursereport.com/schools/starter-league",
+    "locations": "Chicago",
+    "rating": "Avg Rating: 4.3 (6 reviews)",
+    "website": "Starter League Website",
+    "type": "Product Management",
+    "email": "hello@startleague.com"
+  },
+  {
+    "title": "We Got Coders",
+    "coursereport": "https://www.coursereport.com/schools/we-got-coders",
+    "locations": "London",
+    "rating": "Avg Rating: 4.8 (6 reviews)",
+    "website": "We Got Coders Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@wegotcoders.com"
+  },
+  {
+    "title": "Claim Academy",
+    "coursereport": "https://www.coursereport.com/schools/claim-academy",
+    "locations": "St. Louis",
+    "rating": "Avg Rating: 4.2 (5 reviews)",
+    "website": "Claim Academy Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@claimacademystl.com"
+  },
+  {
+    "title": "Coding Temple",
+    "coursereport": "https://www.coursereport.com/schools/coding-temple",
+    "locations": "Schaumburg, Chicago",
+    "rating": "Avg Rating: 5.0 (5 reviews)",
+    "website": "Coding Temple Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@codingtemple.com"
+  },
+  {
+    "title": "Grand Circus",
+    "coursereport": "https://www.coursereport.com/schools/grand-circus",
+    "locations": "Detroit",
+    "rating": "Avg Rating: 4.8 (5 reviews)",
+    "website": "Grand Circus Website",
+    "type": "Mobile Development",
+    "email": "hello@grandcircus.co"
+  },
+  {
+    "title": "The App Academy NL",
+    "coursereport": "https://www.coursereport.com/schools/the-app-academy-nl",
+    "locations": "London, Amsterdam",
+    "rating": "Avg Rating: 5.0 (5 reviews)",
+    "website": "The App Academy NL Website",
+    "type": "Mobile Development",
+    "email": "info@theappacademy.nl"
+  },
+  {
+    "title": "Viking Code School",
+    "coursereport": "https://www.coursereport.com/schools/viking-code-school",
+    "locations": "Online",
+    "rating": "Avg Rating: 5.0 (5 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "hello@vikingeducation.com",
+    "website": "Viking Code School Website"
+  },
+  {
+    "title": "Alphappl",
+    "coursereport": "https://www.coursereport.com/schools/alphappl",
+    "locations": "Porto, Lisbon, Obidos",
+    "rating": "Avg Rating: 4.0 (4 reviews)",
+    "email": "apply@alphappl.com",
+    "type": "Other",
+    "website": "Alphappl Website"
+  },
+  {
+    "title": "Coded Kuwait",
+    "coursereport": "https://www.coursereport.com/schools/coded-kuwait",
+    "locations": "Kuwait City",
+    "rating": "Avg Rating: 4.8 (4 reviews)",
+    "email": "hello@joincoded.com",
+    "website": "Coded Kuwait Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "iNVASIVECODE",
+    "coursereport": "https://www.coursereport.com/schools/invasivecode",
+    "locations": "Barcelona, San Francisco",
+    "rating": "Avg Rating: 5.0 (4 reviews)",
+    "website": "iNVASIVECODE Website",
+    "email": "hello@invasivecode.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "LEARN Academy",
+    "coursereport": "https://www.coursereport.com/schools/learn-academy",
+    "locations": "San Diego",
+    "rating": "Avg Rating: 4.8 (4 reviews)",
+    "email": "Chelsea@notch8.com",
+    "website": "LEARN Academy Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "SeedPaths",
+    "coursereport": "https://www.coursereport.com/schools/seedpaths",
+    "locations": "Denver",
+    "rating": "Avg Rating: 5.0 (4 reviews)",
+    "website": "SeedPaths Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Tech Elevator",
+    "coursereport": "https://www.coursereport.com/schools/tech-elevator",
+    "locations": "Cleveland",
+    "rating": "Avg Rating: 5.0 (4 reviews)",
+    "website": "Tech Elevator Website",
+    "email": "hello@techelevator.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "The Dev School",
+    "coursereport": "https://www.coursereport.com/schools/the-dev-school",
+    "locations": "Nairobi",
+    "rating": "Avg Rating: 5.0 (4 reviews)",
+    "type": "Mobile Development",
+    "email": "hello@thedev.school",
+    "website": "The Dev School Website"
+  },
+  {
+    "title": "TurnToTech",
+    "coursereport": "https://www.coursereport.com/schools/turntotech",
+    "locations": "New York",
+    "rating": "Avg Rating: 5.0 (4 reviews)",
+    "website": "TurnToTech Website",
+    "email": "nyc@turntotech.io",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "V School",
+    "coursereport": "https://www.coursereport.com/schools/V-School",
+    "locations": "Provo, Cedar City",
+    "rating": "Avg Rating: 4.5 (4 reviews)",
+    "website": "V School Website",
+    "email": "info@vschool.io",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "CodeaCamp",
+    "coursereport": "https://www.coursereport.com/schools/codeacamp",
+    "locations": "Mexico City",
+    "rating": "Avg Rating: 5.0 (3 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "CodeaCamp Website"
+  },
+  {
+    "title": "CodeCraft School",
+    "coursereport": "https://www.coursereport.com/schools/codecraft-school",
+    "locations": "Boulder",
+    "rating": "Avg Rating: 4.7 (3 reviews)",
+    "email": "info@codecraftschool.com",
+    "website": "CodeCraft School Website",
+    "type": "UX Design"
+  },
+  {
+    "title": "Code Institute",
+    "coursereport": "https://www.coursereport.com/schools/code-institute",
+    "locations": "Dublin, Online",
+    "rating": "Avg Rating: 3.7 (3 reviews)",
+    "type": "Full-Stack Web Development",
+    "email": "info@codeinstitute.net",
+    "website": "Code Institute Website"
+  },
+  {
+    "title": "Coder Factory",
+    "coursereport": "https://www.coursereport.com/schools/coder-factory",
+    "locations": "Sydney, Melbourne",
+    "rating": "Avg Rating: 5.0 (3 reviews)",
+    "email": "info@coderfactory.com",
+    "website": "Coder Factory Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Launch School",
+    "coursereport": "https://www.coursereport.com/schools/launch-school",
+    "locations": "Online",
+    "rating": "Avg Rating: 5.0 (3 reviews)",
+    "email": "hello@launchschool.com",
+    "type": "Front-End Web Development",
+    "website": "Launch School Website"
+  },
+  {
+    "title": "Savvy Coders",
+    "coursereport": "https://www.coursereport.com/schools/savvy-coders",
+    "locations": "Nashville",
+    "rating": "Avg Rating: 5.0 (3 reviews)",
+    "type": "Front-End Web Development",
+    "website": "Savvy Coders Website",
+    "email": "info@savvycoders.com"
+  },
+  {
+    "title": "Zip Code Wilmington",
+    "coursereport": "https://www.coursereport.com/schools/zip-code-wilmington",
+    "locations": "Wilmington",
+    "rating": "Avg Rating: 5.0 (3 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "Zip Code Wilmington Website",
+    "email": "info@zipcodewilmington.com"
+  },
+  {
+    "title": "Code Cloud",
+    "coursereport": "https://www.coursereport.com/schools/code-cloud",
+    "locations": "Online",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "website": "Code Cloud Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@codecloud.me"
+  },
+  {
+    "title": "Coder Vox",
+    "coursereport": "https://www.coursereport.com/schools/coder-vox",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.5 (2 reviews)",
+    "type": "Full-Stack Web Development",
+    "website": "Coder Vox Website",
+    "email": "info@codervox.com"
+  },
+  {
+    "title": "EpicU",
+    "coursereport": "https://www.coursereport.com/schools/epicu",
+    "locations": "Dallas",
+    "rating": "Avg Rating: 3.0 (2 reviews)",
+    "email": "epicuschool@gmail.com",
+    "website": "EpicU Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Fire Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/fire-bootcamp",
+    "locations": "Sydney, Melbourne, San Francisco, Brisbane",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "website": "Fire Bootcamp Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Guild of Software Architects",
+    "coursereport": "https://www.coursereport.com/schools/guild-of-software-architects",
+    "locations": "Dallas",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "email": "info@guildsa.org",
+    "type": "Mobile Development",
+    "website": "Guild of Software Architects Website"
+  },
+  {
+    "title": "Hackbright Academy",
+    "coursereport": "https://www.coursereport.com/schools/hackbright-academy",
+    "locations": "San Francisco",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "email": "hello@hackbrightacademy.com",
+    "website": "Hackbright Academy Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Interview Kickstart",
+    "coursereport": "https://www.coursereport.com/schools/interview-kickstart",
+    "locations": "Sunnyvale",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "email": "soham@interviewkickstart.com",
+    "website": "Interview Kickstart Website",
+    "type": "Other"
+  },
+  {
+    "title": "Origin Code Academy",
+    "coursereport": "https://www.coursereport.com/schools/origin-code-academy",
+    "locations": "San Diego",
+    "rating": "Avg Rating: 5.0 (2 reviews)",
+    "email": "questions@origincodeacademy.com",
+    "website": "Origin Code Academy Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Springboard",
+    "coursereport": "https://www.coursereport.com/schools/springboard",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.5 (2 reviews)",
+    "type": "Data Science",
+    "website": "Springboard Website",
+    "email": "hello@springboard.com"
+  },
+  {
+    "title": "Ace Hacker Academy",
+    "coursereport": "https://www.coursereport.com/schools/ace-hacker-academy",
+    "locations": "Bangalore",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "type": "Full-Stack Web Development",
+    "website": "Ace Hacker Academy Website",
+    "email": "connect@acehacker.com"
+  },
+  {
+    "title": "Ada",
+    "coursereport": "https://www.coursereport.com/schools/ada",
+    "locations": "Seattle",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "Ada Website",
+    "email": "contact@adadevelopersacademy.org",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Austin Coding Academy",
+    "coursereport": "https://www.coursereport.com/schools/austin-coding-academy",
+    "locations": "Austin",
+    "rating": "Avg Rating: 4.0 (1 review)",
+    "email": "INFO@AUSTINCODINGACADEMY.COM",
+    "website": "Austin Coding Academy Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Beach Coders Academy",
+    "coursereport": "https://www.coursereport.com/schools/beach-coders-academy",
+    "locations": "Los Angeles",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "email": "support@beachcoders.com",
+    "website": "Beach Coders Academy Website",
+    "type": "Other"
+  },
+  {
+    "title": "Cincy Code IT",
+    "coursereport": "https://www.coursereport.com/schools/cincy-code-it",
+    "locations": "Cincinnati",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "Cincy Code IT Website",
+    "email": "lisa@maxtrain.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "CodeAbode",
+    "coursereport": "https://www.coursereport.com/schools/codeabode",
+    "locations": "Chicago, Palos Hills",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "CodeAbode Website",
+    "email": "info@CodeAbode.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Code Builders",
+    "coursereport": "https://www.coursereport.com/schools/code-builders",
+    "locations": "Seattle",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "type": "Full-Stack Web Development",
+    "email": "contact@code.builders",
+    "website": "Code Builders Website"
+  },
+  {
+    "title": "CodePath",
+    "coursereport": "https://www.coursereport.com/schools/codepath",
+    "locations": "San Francisco",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "type": "Mobile Development",
+    "email": "help@thecodepath.com",
+    "website": "CodePath Website"
+  },
+  {
+    "title": "Coderversity",
+    "coursereport": "https://www.coursereport.com/schools/coderversity",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.0 (1 review)",
+    "email": "contact@coderversity.com",
+    "website": "Coderversity Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "CodeStream Labs",
+    "coursereport": "https://www.coursereport.com/schools/codestream-labs",
+    "locations": "San Francisco",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "email": "info@codestreamlabs.com",
+    "website": "CodeStream Labs Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Code Union",
+    "coursereport": "https://www.coursereport.com/schools/code-union",
+    "locations": "Online",
+    "rating": "Avg Rating: 2.0 (1 review)",
+    "website": "Code Union Website",
+    "email": "hello@codeunion.io",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Concordia University Coding Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/concordia-university-coding-bootcamp",
+    "locations": "St. Paul",
+    "rating": "Avg Rating: 2.0 (1 review)",
+    "type": "Full-Stack Web Development",
+    "website": "Concordia University Coding Bootcamp Website"
+  },
+  {
+    "title": "DataCamp",
+    "coursereport": "https://www.coursereport.com/schools/datacamp",
+    "locations": "Online",
+    "rating": "Avg Rating: 4.0 (1 review)",
+    "website": "DataCamp Website",
+    "type": "Data Science",
+    "email": "mgmt@datacamp.com"
+  },
+  {
+    "title": "Deep Dive Coding",
+    "coursereport": "https://www.coursereport.com/schools/deep-dive-coders",
+    "locations": "Albuquerque",
+    "rating": "Avg Rating: 4.0 (1 review)",
+    "type": "Full-Stack Web Development",
+    "email": "info@stemuluscenter.org",
+    "website": "Deep Dive Coding Website"
+  },
+  {
+    "title": "devSchool.io",
+    "coursereport": "https://www.coursereport.com/schools/devschool-io",
+    "locations": "Guatemala City",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "devSchool.io Website",
+    "type": "Front-End Web Development",
+    "email": "admin@devschool.io"
+  },
+  {
+    "title": "GoCode",
+    "coursereport": "https://www.coursereport.com/schools/gocode",
+    "locations": "Guanacaste",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "email": "http://www.gocodenow.com/contact",
+    "type": "Full-Stack Web Development",
+    "website": "GoCode Website"
+  },
+  {
+    "title": "Go Live Labs",
+    "coursereport": "https://www.coursereport.com/schools/go-live-labs",
+    "locations": "Silicon Valley",
+    "rating": "Avg Rating: 1.0 (1 review)",
+    "website": "Go Live Labs Website",
+    "type": "Front-End Web Development",
+    "email": "contact@golivelabs.io"
+  },
+  {
+    "title": "HackerYou",
+    "coursereport": "https://www.coursereport.com/schools/hackeryou",
+    "locations": "Toronto",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "HackerYou Website",
+    "email": "info@hackeryou.com",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Make School",
+    "coursereport": "https://www.coursereport.com/schools/make-school",
+    "locations": "San Francisco, New York",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "type": "Mobile Development",
+    "website": "Make School Website",
+    "email": "hello@makeschool.com"
+  },
+  {
+    "title": "Moringa School",
+    "coursereport": "https://www.coursereport.com/schools/moringa-school",
+    "locations": "Nairobi",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "website": "Moringa School Website",
+    "email": "contact@moringaschool.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Recurse Center",
+    "coursereport": "https://www.coursereport.com/schools/recurse-center",
+    "locations": "New York",
+    "rating": "Avg Rating: 5.0 (1 review)",
+    "type": "Full-Stack Web Development",
+    "website": "Recurse Center Website"
+  },
+  {
+    "title": "The codED",
+    "coursereport": "https://www.coursereport.com/schools/the-coded",
+    "locations": "New York",
+    "rating": "Avg Rating: 2.0 (1 review)",
+    "website": "The codED Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "World Tech Makers",
+    "coursereport": "https://www.coursereport.com/schools/world-tech-makers",
+    "locations": "Sao Paulo, Bogota, Mexico City, Santiago, Buenos Aires",
+    "rating": "Avg Rating: 1.0 (1 review)",
+    "website": "World Tech Makers Website",
+    "type": "Product Management",
+    "email": "info@worldtechmakers.com"
+  },
+  {
+    "title": "30 Weeks",
+    "coursereport": "https://www.coursereport.com/schools/30-weeks",
+    "locations": "New York",
+    "website": "30 Weeks Website",
+    "type": "Product Management"
+  },
+  {
+    "title": "Academia de Código",
+    "coursereport": "https://www.coursereport.com/schools/academia-de-codigo",
+    "locations": "Lisbon",
+    "website": "Academia de Código Website",
+    "type": "Full-Stack Web Development",
+    "email": "helloworld@academiadecodigo.org"
+  },
+  {
+    "title": "Academy Pittsburgh",
+    "coursereport": "https://www.coursereport.com/schools/academy-pittsburgh",
+    "locations": "Pittsburgh",
+    "type": "Front-End Web Development",
+    "email": "academypgh@gmail.com",
+    "website": "Academy Pittsburgh Website"
+  },
+  {
+    "title": "Academy X",
+    "coursereport": "https://www.coursereport.com/schools/academy-x",
+    "locations": "Los Angeles, San Francisco",
+    "email": "info@academyx.com",
+    "website": "Academy X Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "AIT Learning",
+    "coursereport": "https://www.coursereport.com/schools/ait-learning",
+    "locations": "Washington",
+    "website": "AIT Learning Website",
+    "email": "info@aitlearning.com",
+    "type": "Other"
+  },
+  {
+    "title": "American Graphics Institute",
+    "coursereport": "https://www.coursereport.com/schools/american-graphics-institute",
+    "locations": "Boston",
+    "type": "UX Design",
+    "website": "American Graphics Institute Website"
+  },
+  {
+    "title": "AngelHack Education",
+    "coursereport": "https://www.coursereport.com/schools/angelhack-education",
+    "locations": "Los Angeles",
+    "website": "AngelHack Education Website",
+    "email": "info@angelhack.com",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Apprentice.io",
+    "coursereport": "https://www.coursereport.com/schools/apprentice-io",
+    "locations": "San Francisco, Boston",
+    "email": "apply@apprentice.io",
+    "website": "Apprentice.io Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Astro Code School",
+    "coursereport": "https://www.coursereport.com/schools/astro-code-school",
+    "locations": "Durham",
+    "email": "brussell@astrocodeschool.com",
+    "website": "Astro Code School Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Atlanta Code",
+    "coursereport": "https://www.coursereport.com/schools/atlanta-code",
+    "locations": "Atlanta",
+    "website": "Atlanta Code Website",
+    "email": "info@atlantacode.com",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Awesome Inc U",
+    "coursereport": "https://www.coursereport.com/schools/awesome-inc-u",
+    "locations": "Lexington",
+    "website": "Awesome Inc U Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@awesomeincu.com"
+  },
+  {
+    "title": "Base10 Academy",
+    "coursereport": "https://www.coursereport.com/schools/base10-academy",
+    "locations": "Charlotte",
+    "type": "Full-Stack Web Development",
+    "email": "info@base10academy.com",
+    "website": "Base10 Academy Website"
+  },
+  {
+    "title": "Betamore Academy",
+    "coursereport": "https://www.coursereport.com/schools/betamore-academy",
+    "locations": "Baltimore",
+    "website": "Betamore Academy Website",
+    "type": "Other"
+  },
+  {
+    "title": "Big D Code",
+    "coursereport": "https://www.coursereport.com/schools/big-d-code",
+    "locations": "Dallas",
+    "website": "Big D Code Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Big Nerd Ranch",
+    "coursereport": "https://www.coursereport.com/schools/big-nerd-ranch",
+    "locations": "Monterey, Atlanta",
+    "website": "Big Nerd Ranch Website",
+    "type": "Other",
+    "email": "marketing@bignerdranch.com"
+  },
+  {
+    "title": "Blur State",
+    "coursereport": "https://www.coursereport.com/schools/blur-state",
+    "locations": "Fayetteville",
+    "website": "Blur State Website",
+    "type": "Mobile Development",
+    "email": "http://www.blurstate.com/contact"
+  },
+  {
+    "title": "BoiseCodeWorks",
+    "coursereport": "https://www.coursereport.com/schools/boisecodeworks",
+    "locations": "Boise",
+    "type": "Full-Stack Web Development",
+    "website": "BoiseCodeWorks Website"
+  },
+  {
+    "title": "Boole Institute",
+    "coursereport": "https://www.coursereport.com/schools/boole-institute",
+    "locations": "Cleveland",
+    "type": "Full-Stack Web Development",
+    "email": "contact@boole.co",
+    "website": "Boole Institute Website"
+  },
+  {
+    "title": "Camp Code Away",
+    "coursereport": "https://www.coursereport.com/schools/camp-code-away",
+    "locations": "Bali",
+    "email": "team@campcodeaway.com",
+    "website": "Camp Code Away Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Centriq Training",
+    "coursereport": "https://www.coursereport.com/schools/centriq-training",
+    "locations": "Kansas City",
+    "type": "Full-Stack Web Development",
+    "website": "Centriq Training Website"
+  },
+  {
+    "title": "Code 42",
+    "coursereport": "https://www.coursereport.com/schools/code-42",
+    "locations": "Paris",
+    "type": "Full-Stack Web Development",
+    "website": "Code 42 Website"
+  },
+  {
+    "title": "Codecademy Labs",
+    "coursereport": "https://www.coursereport.com/schools/codecademy-labs",
+    "locations": "Chicago, Miami, Detroit, New York, Los Angeles",
+    "website": "Codecademy Labs Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "CODEcamp Charleston",
+    "coursereport": "https://www.coursereport.com/schools/codecamp-charleston",
+    "locations": "Charleston",
+    "email": "info@chscodecamp.com",
+    "website": "CODEcamp Charleston Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Code Chicago",
+    "coursereport": "https://www.coursereport.com/schools/code-chicago",
+    "locations": "Chicago",
+    "website": "Code Chicago Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "CodeClan",
+    "coursereport": "https://www.coursereport.com/schools/codeclan",
+    "locations": "Edinburgh",
+    "type": "Front-End Web Development",
+    "email": "info@codeclan.co.uk",
+    "website": "CodeClan Website"
+  },
+  {
+    "title": "CODED",
+    "coursereport": "https://www.coursereport.com/schools/coded",
+    "locations": "Online",
+    "email": "classes@codedinc.com",
+    "type": "Full-Stack Web Development",
+    "website": "CODED Website"
+  },
+  {
+    "title": "Coded by U",
+    "coursereport": "https://www.coursereport.com/schools/coded-by-u",
+    "locations": "Philadelphia",
+    "email": "team@codedbyu.com",
+    "website": "Coded by U Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Code Fever",
+    "coursereport": "https://www.coursereport.com/schools/code-fever",
+    "locations": "Miami",
+    "type": "Full-Stack Web Development",
+    "website": "Code Fever Website"
+  },
+  {
+    "title": "Code For Progress",
+    "coursereport": "https://www.coursereport.com/schools/code-for-progress",
+    "locations": "Washington",
+    "type": "Full-Stack Web Development",
+    "email": "info@codeforprogress.org",
+    "website": "Code For Progress Website"
+  },
+  {
+    "title": "Codemaster Institute",
+    "coursereport": "https://www.coursereport.com/schools/codemaster-institute",
+    "locations": "Perth",
+    "email": "register@codemasterinstitute.com",
+    "website": "Codemaster Institute Website",
+    "type": "Other"
+  },
+  {
+    "title": "CodeMasters Academy",
+    "coursereport": "https://www.coursereport.com/schools/codemasters-academy",
+    "locations": "Orange County",
+    "website": "CodeMasters Academy Website",
+    "type": "Full-Stack Web Development",
+    "email": "contact@codemastersacademy.com"
+  },
+  {
+    "title": "CodeNinja",
+    "coursereport": "https://www.coursereport.com/schools/codeninja",
+    "locations": "Tempe",
+    "website": "CodeNinja Website",
+    "email": "code@code-ninja.co",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Code Platoon",
+    "coursereport": "https://www.coursereport.com/schools/code-platoon",
+    "locations": "Chicago",
+    "type": "Full-Stack Web Development",
+    "website": "Code Platoon Website",
+    "email": "rod@codeplatoon.org"
+  },
+  {
+    "title": "Coder Cadre",
+    "coursereport": "https://www.coursereport.com/schools/coder-cadre",
+    "locations": "Los Angeles",
+    "website": "Coder Cadre Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Coderoute",
+    "coursereport": "https://www.coursereport.com/schools/coderoute",
+    "locations": "London",
+    "type": "Full-Stack Web Development",
+    "website": "Coderoute Website",
+    "email": "getinvolved@coderoute.co.uk"
+  },
+  {
+    "title": "Coder's Lab",
+    "coursereport": "https://www.coursereport.com/schools/coder-s-lab",
+    "locations": "Warsaw",
+    "email": "aleksandra.starzenska@coderslab.pl",
+    "website": "Coder's Lab Website",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "codeU",
+    "coursereport": "https://www.coursereport.com/schools/codeu",
+    "locations": "Atlanta",
+    "website": "codeU Website",
+    "email": "team@codeU.us",
+    "type": "Other"
+  },
+  {
+    "title": "Coding Boot Camp at UT Austin",
+    "coursereport": "https://www.coursereport.com/schools/coding-boot-camp-at-ut-austin",
+    "locations": "Austin",
+    "type": "Full-Stack Web Development",
+    "website": "Coding Boot Camp at UT Austin Website"
+  },
+  {
+    "title": "Coding Bootcamp Praha",
+    "coursereport": "https://www.coursereport.com/schools/coding-bootcamp-praha",
+    "locations": "Prague",
+    "email": "ask@data4you.cz",
+    "website": "Coding Bootcamp Praha Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Coding is the New Literacy",
+    "coursereport": "https://www.coursereport.com/schools/coding-is-the-new-literacy",
+    "locations": "Delhi",
+    "website": "Coding is the New Literacy Website",
+    "type": "Full-Stack Web Development",
+    "email": "codingisthenewliteracy@gmail.com"
+  },
+  {
+    "title": "Craftsmanship Academy",
+    "coursereport": "https://www.coursereport.com/schools/craftsmanship-academy",
+    "locations": "Raleigh",
+    "email": "communications@craftsmanshipacademy.com",
+    "type": "Mobile Development",
+    "website": "Craftsmanship Academy Website"
+  },
+  {
+    "title": "Cribb",
+    "coursereport": "https://www.coursereport.com/schools/cribb",
+    "locations": "Atlanta",
+    "email": "hello@cribb.co",
+    "website": "Cribb Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Cultivating Coders",
+    "coursereport": "https://www.coursereport.com/schools/cultivating-coders",
+    "locations": "Laguna",
+    "website": "Cultivating Coders Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@cultivatingcoders.com"
+  },
+  {
+    "title": "Data Science Dojo",
+    "coursereport": "https://www.coursereport.com/schools/data-science-dojo",
+    "locations": "Toronto, Silicon Valley, Paris, Barcelona, Washington, Seattle",
+    "website": "Data Science Dojo Website",
+    "type": "Data Science"
+  },
+  {
+    "title": "Data Science Europe",
+    "coursereport": "https://www.coursereport.com/schools/data-science-europe",
+    "locations": "Dublin",
+    "website": "Data Science Europe Website",
+    "email": "info@datascienceeurope.com",
+    "type": "Data Science"
+  },
+  {
+    "title": "Data Science for Social Good",
+    "coursereport": "https://www.coursereport.com/schools/data-science-for-social-good",
+    "locations": "Chicago",
+    "email": "datascifellows@gmail.com",
+    "type": "Data Science",
+    "website": "Data Science for Social Good Website"
+  },
+  {
+    "title": "Data Science Retreat",
+    "coursereport": "https://www.coursereport.com/schools/data-science-retreat",
+    "locations": "Berlin",
+    "website": "Data Science Retreat Website",
+    "type": "Data Science",
+    "email": "org@datascienceretreat.com"
+  },
+  {
+    "title": "Delta Program",
+    "coursereport": "https://www.coursereport.com/schools/delta-program",
+    "locations": "Austin",
+    "website": "Delta Program Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Depot/U",
+    "coursereport": "https://www.coursereport.com/schools/depot-u",
+    "locations": "Birmingham",
+    "type": "Front-End Web Development",
+    "website": "Depot/U Website",
+    "email": "code@depotu.io"
+  },
+  {
+    "title": "Desafio Latam",
+    "coursereport": "https://www.coursereport.com/schools/desafio-latam",
+    "locations": "Monterrey, Bogota, Santiago",
+    "website": "Desafio Latam Website",
+    "type": "Full-Stack Web Development",
+    "email": "inscripciones@desafiolatam.com"
+  },
+  {
+    "title": "Dev Academy",
+    "coursereport": "https://www.coursereport.com/schools/dev-academy",
+    "locations": "Wellington, New Zealand",
+    "type": "Full-Stack Web Development",
+    "website": "Dev Academy Website"
+  },
+  {
+    "title": "Dev/Iowa Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/dev-iowa-bootcamp",
+    "locations": "Iowa City",
+    "website": "Dev/Iowa Bootcamp Website",
+    "type": "Full-Stack Web Development",
+    "email": "IOWAJPEC@UIOWA.EDU"
+  },
+  {
+    "title": "DevStream",
+    "coursereport": "https://www.coursereport.com/schools/devstream",
+    "locations": "Dublin",
+    "type": "Full-Stack Web Development",
+    "email": "info@devstream.io",
+    "website": "DevStream Website"
+  },
+  {
+    "title": "Digital House",
+    "coursereport": "https://www.coursereport.com/schools/digital-house",
+    "locations": "Buenos Aires",
+    "website": "Digital House Website",
+    "email": "contacto@digitalhouse.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Digital Professional Institute",
+    "coursereport": "https://www.coursereport.com/schools/digital-professional-institute",
+    "locations": "Online, Chicago",
+    "website": "Digital Professional Institute Website",
+    "type": "Digital Marketing",
+    "email": "dpi@tfa.edu"
+  },
+  {
+    "title": "Disruption Institute",
+    "coursereport": "https://www.coursereport.com/schools/disruption-institute",
+    "locations": "Kansas City",
+    "type": "Mobile Development",
+    "website": "Disruption Institute Website"
+  },
+  {
+    "title": "dots School",
+    "coursereport": "https://www.coursereport.com/schools/dots-school",
+    "locations": "Los Angeles",
+    "email": "questions@dots.school",
+    "website": "dots School Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "EHD Academy",
+    "coursereport": "https://www.coursereport.com/schools/ehd-academy",
+    "locations": "London",
+    "email": "academy@energyhousedigital.com",
+    "type": "Front-End Web Development",
+    "website": "EHD Academy Website"
+  },
+  {
+    "title": "Elevation Academy",
+    "coursereport": "https://www.coursereport.com/schools/elevation-academy",
+    "locations": "Tel Aviv",
+    "email": "contact@elevationacademy.co",
+    "type": "Other",
+    "website": "Elevation Academy Website"
+  },
+  {
+    "title": "Florida Vocational Institute",
+    "coursereport": "https://www.coursereport.com/schools/florida-vocational-institute",
+    "locations": "Miami",
+    "website": "Florida Vocational Institute Website",
+    "email": "vmoreno@fvi.edu",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Gainesville Dev Academy",
+    "coursereport": "https://www.coursereport.com/schools/gainesville-dev-academy",
+    "locations": "Gainesville",
+    "type": "Full-Stack Web Development",
+    "email": "hello@gainesvilledevacademy.com",
+    "website": "Gainesville Dev Academy Website"
+  },
+  {
+    "title": "Geekskool",
+    "coursereport": "https://www.coursereport.com/schools/geekskool",
+    "locations": "Bangalore",
+    "email": "info@geekskool.com",
+    "website": "Geekskool Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Geekwise Academy",
+    "coursereport": "https://www.coursereport.com/schools/geekwise-academy",
+    "locations": "Fresno",
+    "email": "info@geekwiseacademy.com",
+    "type": "Front-End Web Development",
+    "website": "Geekwise Academy Website"
+  },
+  {
+    "title": "Grace Hopper Academy",
+    "coursereport": "https://www.coursereport.com/schools/grace-hopper-academy",
+    "locations": "New York",
+    "email": "hello@gracehopper.com",
+    "website": "Grace Hopper Academy Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Greater Sum",
+    "coursereport": "https://www.coursereport.com/schools/greater-sum",
+    "locations": "Atlanta",
+    "website": "Greater Sum Website",
+    "email": "info@greatersum.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "HackerForge",
+    "coursereport": "https://www.coursereport.com/schools/hackerforge",
+    "locations": "Shreveport",
+    "type": "Full-Stack Web Development",
+    "website": "HackerForge Website"
+  },
+  {
+    "title": "Hackership",
+    "coursereport": "https://www.coursereport.com/schools/hackership",
+    "locations": "Santa Teresa, Berlin",
+    "type": "Mobile Development",
+    "website": "Hackership Website",
+    "email": "team@hackership.org"
+  },
+  {
+    "title": "Hackership San Francisco",
+    "coursereport": "https://www.coursereport.com/schools/hackership-san-francisco",
+    "locations": "San Francisco",
+    "website": "Hackership San Francisco Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Hack Pacific",
+    "coursereport": "https://www.coursereport.com/schools/hack-pacific",
+    "locations": "Hong Kong",
+    "email": "hello@hackpacific.com",
+    "website": "Hack Pacific Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "HappyFunCorp Technology Academy",
+    "coursereport": "https://www.coursereport.com/schools/happyfuncorp-technology-academy",
+    "locations": "New York",
+    "type": "Other",
+    "website": "HappyFunCorp Technology Academy Website"
+  },
+  {
+    "title": "Holberton School",
+    "coursereport": "https://www.coursereport.com/schools/holberton-school",
+    "locations": "San Francisco",
+    "type": "Full-Stack Web Development",
+    "website": "Holberton School Website"
+  },
+  {
+    "title": "Horizons Academy",
+    "coursereport": "https://www.coursereport.com/schools/horizons-academy",
+    "locations": "Philadelphia",
+    "website": "Horizons Academy Website",
+    "type": "Full-Stack Web Development",
+    "email": "info@joinhorizons.com"
+  },
+  {
+    "title": "Hungry Academy",
+    "coursereport": "https://www.coursereport.com/schools/hungry-academy",
+    "website": "Hungry Academy Website",
+    "email": "hungryacademy@jumpstartlab.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "iKompass",
+    "coursereport": "https://www.coursereport.com/schools/ikompass",
+    "locations": "Singapore",
+    "website": "iKompass Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "ikuw",
+    "coursereport": "https://www.coursereport.com/schools/ikuw",
+    "locations": "Missoula",
+    "type": "Full-Stack Web Development",
+    "website": "ikuw Website",
+    "email": "training@ikuwsolutions.com"
+  },
+  {
+    "title": "Inside Sales Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/inside-sales-bootcamp",
+    "locations": "Sunnyvale, Denver, Boulder, Seattle",
+    "website": "Inside Sales Bootcamp Website"
+  },
+  {
+    "title": "Insight",
+    "coursereport": "https://www.coursereport.com/schools/insight",
+    "locations": "Silicon Valley, New York",
+    "type": "Data Science",
+    "email": "info@insightdatascience.com",
+    "website": "Insight Website"
+  },
+  {
+    "title": "Interface Web School",
+    "coursereport": "https://www.coursereport.com/schools/interface-web-school",
+    "locations": "Lincoln, Omaha",
+    "email": "thrive@interfaceschool.com",
+    "type": "Front-End Web Development",
+    "website": "Interface Web School Website"
+  },
+  {
+    "title": "Israel Tech Challenge",
+    "coursereport": "https://www.coursereport.com/schools/israel-tech-challenge",
+    "locations": "Tel Aviv",
+    "type": "Full-Stack Web Development",
+    "website": "Israel Tech Challenge Website",
+    "email": "info@israeltechallenge.com"
+  },
+  {
+    "title": "ITHAKAI",
+    "coursereport": "https://www.coursereport.com/schools/ithakai",
+    "locations": "Irvine",
+    "email": "hello@ithakai.com",
+    "type": "UX Design",
+    "website": "ITHAKAI Website"
+  },
+  {
+    "title": "iXperience",
+    "coursereport": "https://www.coursereport.com/schools/ixperience",
+    "locations": "Cape Town",
+    "website": "iXperience Website",
+    "type": "Front-End Web Development",
+    "email": "info@ixperience.co.za"
+  },
+  {
+    "title": "Jaaga",
+    "coursereport": "https://www.coursereport.com/schools/jaaga",
+    "locations": "Bangalore",
+    "website": "Jaaga Website",
+    "email": "info@jaaga.in",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Jademy",
+    "coursereport": "https://www.coursereport.com/schools/jademy",
+    "locations": "Bucharest",
+    "type": "Full-Stack Web Development",
+    "website": "Jademy Website",
+    "email": "contact@jademy.ro"
+  },
+  {
+    "title": "Laboratoria",
+    "coursereport": "https://www.coursereport.com/schools/laboratoria",
+    "type": "Full-Stack Web Development",
+    "email": "info@laboratoria.la",
+    "website": "Laboratoria Website"
+  },
+  {
+    "title": "Ladies Learning Code",
+    "coursereport": "https://www.coursereport.com/schools/ladies-learning-code",
+    "locations": "Toronto",
+    "email": "info@ladieslearningcode.com",
+    "type": "Front-End Web Development",
+    "website": "Ladies Learning Code Website"
+  },
+  {
+    "title": "Learn.Modern-Developer",
+    "coursereport": "https://www.coursereport.com/schools/learn-modern-developer",
+    "locations": "Online",
+    "type": "Front-End Web Development",
+    "email": "whatsup@modern-developer.com",
+    "website": "Learn.Modern-Developer Website"
+  },
+  {
+    "title": "LearnTech Labs",
+    "coursereport": "https://www.coursereport.com/schools/learntech-labs",
+    "locations": "San Francisco",
+    "website": "LearnTech Labs Website",
+    "email": "info@learntechlabs.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Learn to Code London",
+    "coursereport": "https://www.coursereport.com/schools/learn-to-code-london",
+    "locations": "London",
+    "website": "Learn to Code London Website",
+    "email": "charlotte@learn-to-code-london.co.uk"
+  },
+  {
+    "title": "Level",
+    "coursereport": "https://www.coursereport.com/schools/level",
+    "locations": "Boston, San Jose, Seattle, Charlotte",
+    "email": "jon@leveledu.com",
+    "type": "Data Science",
+    "website": "Level Website"
+  },
+  {
+    "title": "Lumenbrite",
+    "coursereport": "https://www.coursereport.com/schools/lumenbrite",
+    "locations": "Austin",
+    "website": "Lumenbrite Website",
+    "email": "support@lumenbrite.com",
+    "type": "Other"
+  },
+  {
+    "title": "Maricopa Corporate College",
+    "coursereport": "https://www.coursereport.com/schools/maricopa-corporate-college",
+    "locations": "Tempe, Scottsdale",
+    "type": "Front-End Web Development",
+    "website": "Maricopa Corporate College Website"
+  },
+  {
+    "title": "Microsoft Research Data Science Summer School",
+    "coursereport": "https://www.coursereport.com/schools/microsoft-research-data-science-summer-school",
+    "locations": "New York",
+    "website": "Microsoft Research Data Science Summer School Website",
+    "email": "ds3@microsoft.com",
+    "type": "Data Science"
+  },
+  {
+    "title": "Midwest Hacker School",
+    "coursereport": "https://www.coursereport.com/schools/midwest-hacker-school",
+    "locations": "Online",
+    "website": "Midwest Hacker School Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Monroe College Tech Boot Camp",
+    "coursereport": "https://www.coursereport.com/schools/monroe-college-tech-boot-camp",
+    "locations": "New York",
+    "email": "queens@monroecollege.edu",
+    "type": "Mobile Development",
+    "website": "Monroe College Tech Boot Camp Website"
+  },
+  {
+    "title": "Montana Code School",
+    "coursereport": "https://www.coursereport.com/schools/montana-code-school",
+    "locations": "Bozeman, Missoula",
+    "website": "Montana Code School Website",
+    "email": "talk@montanacodeschool.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "NEXT Academy",
+    "coursereport": "https://www.coursereport.com/schools/next-academy",
+    "locations": "Kuala Lampur",
+    "type": "Full-Stack Web Development",
+    "email": "hello@nextacademy.com",
+    "website": "NEXT Academy Website"
+  },
+  {
+    "title": "Omaha Code School",
+    "coursereport": "https://www.coursereport.com/schools/omaha-code-school",
+    "locations": "Omaha",
+    "website": "Omaha Code School Website",
+    "type": "Full-Stack Web Development",
+    "email": "learn@omahacodeschool.com"
+  },
+  {
+    "title": "Operation Spark",
+    "coursereport": "https://www.coursereport.com/schools/operation-spark",
+    "locations": "New Orleans",
+    "email": "admissions@operationspark.org",
+    "website": "Operation Spark Website"
+  },
+  {
+    "title": "PARSEC Group",
+    "coursereport": "https://www.coursereport.com/schools/parsec-group",
+    "locations": "Denver",
+    "website": "PARSEC Group Website",
+    "email": "experts@parsec.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Pen and Paper Coding",
+    "coursereport": "https://www.coursereport.com/schools/pen-and-paper-coding",
+    "locations": "New York",
+    "website": "Pen and Paper Coding Website",
+    "email": "erik@penpapercoding.com",
+    "type": "Front-End Web Development"
+  },
+  {
+    "title": "Philly Dev Camp",
+    "coursereport": "https://www.coursereport.com/schools/philly-dev-camp",
+    "locations": "Philadelphia",
+    "website": "Philly Dev Camp Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Praxis Data Science",
+    "coursereport": "https://www.coursereport.com/schools/praxis-data-science",
+    "locations": "Silicon Valley",
+    "website": "Praxis Data Science Website",
+    "type": "Data Science"
+  },
+  {
+    "title": "Ruby On The Beach",
+    "coursereport": "https://www.coursereport.com/schools/ruby-on-the-beach",
+    "locations": "Bali, Canary Islands, Pacific Coast, Ecuador",
+    "type": "Full-Stack Web Development",
+    "website": "Ruby On The Beach Website"
+  },
+  {
+    "title": "Rutgers Coding Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/rutgers-coding-bootcamp",
+    "locations": "Jersey City, New Brunswick",
+    "email": "codingbootcamp@docs.rutgers.edu",
+    "website": "Rutgers Coding Bootcamp Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Scale",
+    "coursereport": "https://www.coursereport.com/schools/scale",
+    "locations": "San Antonio",
+    "type": "Full-Stack Web Development",
+    "website": "Scale Website",
+    "email": "info@gotoscale.com"
+  },
+  {
+    "title": "Science to Data Science",
+    "coursereport": "https://www.coursereport.com/schools/science-to-data-science",
+    "locations": "London",
+    "email": "info@s2ds.org",
+    "type": "Data Science",
+    "website": "Science to Data Science Website"
+  },
+  {
+    "title": "SD Code Bootcamp",
+    "coursereport": "https://www.coursereport.com/schools/sd-code-bootcamp",
+    "locations": "Sioux Falls",
+    "email": "josh@m9development.com",
+    "website": "SD Code Bootcamp Website",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Sharptop Co.",
+    "coursereport": "https://www.coursereport.com/schools/sharptop-co",
+    "locations": "Lynchburg",
+    "website": "Sharptop Co. Website",
+    "type": "Mobile Development",
+    "email": "info@sharptop.co"
+  },
+  {
+    "title": "Simplon",
+    "coursereport": "https://www.coursereport.com/schools/simplon",
+    "locations": "Cluj, Paris",
+    "website": "Simplon Website",
+    "email": "inbox@simplon.co",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Skaled",
+    "coursereport": "https://www.coursereport.com/schools/skaled",
+    "locations": "New York",
+    "website": "Skaled Website",
+    "email": "info@skaled.com",
+    "type": "Other"
+  },
+  {
+    "title": "Smart Factory",
+    "coursereport": "https://www.coursereport.com/schools/smart-factory",
+    "locations": "Minneapolis",
+    "website": "Smart Factory Website",
+    "email": "go@smartfactory.com",
+    "type": "Mobile Development"
+  },
+  {
+    "title": "Square Code Camp",
+    "coursereport": "https://www.coursereport.com/schools/square-code-camp",
+    "locations": "San Francisco",
+    "type": "Full-Stack Web Development",
+    "email": "codecamp@squareup.com",
+    "website": "Square Code Camp Website"
+  },
+  {
+    "title": "Stackademy",
+    "coursereport": "https://www.coursereport.com/schools/stackademy",
+    "locations": "Berlin",
+    "email": "https://twitter.com/stackademy",
+    "type": "Full-Stack Web Development",
+    "website": "Stackademy Website"
+  },
+  {
+    "title": "Star City Code School",
+    "coursereport": "https://www.coursereport.com/schools/star-city-code-school",
+    "locations": "Lincoln",
+    "website": "Star City Code School Website",
+    "type": "Full-Stack Web Development",
+    "email": "learn@starcitycodeschool.com"
+  },
+  {
+    "title": "Startup Ignition",
+    "coursereport": "https://www.coursereport.com/schools/startup-ignition",
+    "locations": "Provo",
+    "type": "Product Management",
+    "email": "info@startupignition.com",
+    "website": "Startup Ignition Website"
+  },
+  {
+    "title": "Sydney Dev Camp",
+    "coursereport": "https://www.coursereport.com/schools/sydney-dev-camp",
+    "locations": "Sydney",
+    "email": "info@sydneydevcamp.com",
+    "type": "Full-Stack Web Development",
+    "website": "Sydney Dev Camp Website"
+  },
+  {
+    "title": "TalentBuddy",
+    "coursereport": "https://www.coursereport.com/schools/talentbuddy",
+    "locations": "Online",
+    "type": "Front-End Web Development",
+    "website": "TalentBuddy Website",
+    "email": "team@talentbuddy.co"
+  },
+  {
+    "title": "Tech Career Booster",
+    "coursereport": "https://www.coursereport.com/schools/tech-career-booster",
+    "locations": "Online, Athens, Greece",
+    "rating": "Avg Rating: 0.0 (0 reviews)",
+    "email": "info@techcareerbooster.com",
+    "type": "Full-Stack Web Development",
+    "website": "Tech Career Booster Website"
+  },
+  {
+    "title": "The Coding Boot Camp at UCLA Extension",
+    "coursereport": "https://www.coursereport.com/schools/the-coding-boot-camp-at-ucla-extension",
+    "locations": "Los Angeles",
+    "website": "The Coding Boot Camp at UCLA Extension Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "The Data Incubator",
+    "coursereport": "https://www.coursereport.com/schools/the-data-incubator",
+    "locations": "New York",
+    "website": "The Data Incubator Website",
+    "type": "Data Science"
+  },
+  {
+    "title": "The Hacking School",
+    "coursereport": "https://www.coursereport.com/schools/the-hacking-school",
+    "locations": "Hyderabad, India",
+    "website": "The Hacking School Website",
+    "email": "merajismeraj@gmail.com",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "The Institute for Statistics Education",
+    "coursereport": "https://www.coursereport.com/schools/the-institute-for-statistics-education",
+    "locations": "Online",
+    "email": "ourcourses@statistics.com",
+    "website": "The Institute for Statistics Education Website",
+    "type": "Data Science"
+  },
+  {
+    "title": "ThoughtKite",
+    "coursereport": "https://www.coursereport.com/schools/thoughtkite",
+    "locations": "Toronto",
+    "email": "hello@thoughtkite.com",
+    "website": "ThoughtKite Website",
+    "type": "Product Management"
+  },
+  {
+    "title": "UCF Coding Boot Camp",
+    "coursereport": "https://www.coursereport.com/schools/ucf-coding-boot-camp",
+    "locations": "Orlando",
+    "website": "UCF Coding Boot Camp Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Vital Accelerator",
+    "coursereport": "https://www.coursereport.com/schools/vital-accelerator",
+    "locations": "Online, Madison, Appleton, Milwaukee",
+    "website": "Vital Accelerator Website",
+    "type": "Other",
+    "email": "hello@newhorizonswi.com"
+  },
+  {
+    "title": "WeThinkCode_",
+    "coursereport": "https://www.coursereport.com/schools/wethinkcode_",
+    "locations": "Johannesburg",
+    "email": "info@wethinkcode.co.za",
+    "website": "WeThinkCode_ Website",
+    "type": "Full-Stack Web Development"
+  },
+  {
+    "title": "Wild Code School",
+    "coursereport": "https://www.coursereport.com/schools/wild-code-school",
+    "type": "Front-End Web Development",
+    "website": "Wild Code School Website"
+  },
+  {
+    "title": "XTOL.Careers",
+    "coursereport": "https://www.coursereport.com/schools/xtol-careers",
+    "locations": "Austin",
+    "website": "XTOL.Careers Website",
+    "type": "Data Science",
+    "email": "info@xtol.careers"
+  },
+  {
+    "title": "Zipfian Academy",
+    "coursereport": "https://www.coursereport.com/schools/zipfian-academy",
+    "locations": "San Francisco",
+    "website": "Zipfian Academy Website",
+    "email": "hello@zipfianacademy.com",
+    "type": "Data Science"
+  }
+]

@@ -1,0 +1,6 @@
+<script src="schools.js"></script>
+<script>
+  schools.forEach(function(school) {
+    document.write(Object.keys(school).map(function(k) { return school[k]; }).join(','));
+  });
+</script>
